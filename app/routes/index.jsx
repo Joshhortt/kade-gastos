@@ -1,7 +1,7 @@
 // your-domain.com/
 
-import { Link } from '@remix-run/react';
-import { FaArrowRight, FaDollarSign, FaChartBar } from 'react-icons/fa';
+import { Link } from "@remix-run/react";
+import { FaArrowRight, FaDollarSign, FaChartBar } from "react-icons/fa";
 
 export default function Index() {
   return (
@@ -9,17 +9,22 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaDollarSign />
-          <h2>A Central Space</h2>
+          <h2>Kadê Gastos</h2>
         </header>
         <div className="marketing-content">
           <div className="marketing-image">
-            <img src="images/expenses-management.jpg" alt="A list of expenses." />
+            <img
+              src="images/expenses-management.jpg"
+              alt="A list of expenses."
+            />
           </div>
           <div className="marketing-explanation">
-            <p>Manage your expenses in one central place.</p>
+            {/* Manage your expenses in one central place. */}
+            <p>Gerir as suas despesas num só local.</p>
             <p>
               <Link className="cta" to="/expenses">
-                <span>Get Started</span>
+                {/* Get Started */}
+                <span>Iniciar!</span>
                 <FaArrowRight />
               </Link>
             </p>
@@ -29,12 +34,14 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaChartBar />
-          <h2>Detailed Analytics</h2>
+          {/* Detailed Analytics */}
+          <h2>Análise detalhada</h2>
         </header>
         <div className="marketing-content">
-          <p className='marketing-explanation'>
-            Benefit from best-in-class analytics to understand your spending
-            patterns.
+          {/* Benefit from best-in-class analytics to understand your spending patterns. */}
+          <p className="marketing-explanation">
+            Beneficie da melhor Análise e Controlo Orçamental dos seus gastos
+            Padrão.
           </p>
           <div className="marketing-image">
             <img src="images/expenses-chart.jpg" alt="A demo bar chart." />
