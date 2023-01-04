@@ -9,7 +9,7 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaDollarSign />
-          <h2>Kadê Gastos</h2>
+          <h2>A sua App para processar mais rápidamente as despesas.</h2>
         </header>
         <div className="marketing-content">
           <div className="marketing-image">
@@ -24,7 +24,7 @@ export default function Index() {
             <p>
               <Link className="cta" to="/expenses">
                 {/* Get Started */}
-                <span>Iniciar!</span>
+                <span>Iniciar</span>
                 <FaArrowRight />
               </Link>
             </p>

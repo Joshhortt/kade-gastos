@@ -11,7 +11,7 @@ function MainHeader() {
           </li>
           <li>
             {/* Pricing */}
-            <a href="/pricing">Preçário</a>
+            <a href="/pricing">Preço</a>
           </li>
           <li>
             {/* Expenses */}

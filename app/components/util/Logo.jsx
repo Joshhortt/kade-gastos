@@ -1,7 +1,7 @@
 function Logo() {
   return (
     <h1 id="logo">
-      <a href="/">RemixExpenses</a>
+      <a href="/">Kadê Gastos</a>
     </h1>
   );
 }
