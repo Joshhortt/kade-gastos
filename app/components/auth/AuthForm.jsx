@@ -1,4 +1,4 @@
-import { FaLock } from 'react-icons/fa';
+import { FaLock } from "react-icons/fa";
 
 function AuthForm() {
   return (
@@ -7,7 +7,7 @@ function AuthForm() {
         <FaLock />
       </div>
       <p>
-        <label htmlFor="email">Email Address</label>
+        <label htmlFor="email">E-mail</label>
         <input type="email" id="email" name="email" required />
       </p>
       <p>
@@ -16,7 +16,7 @@ function AuthForm() {
       </p>
       <div className="form-actions">
         <button>Login</button>
-        <a href="/auth">Log in with existing user</a>
+        <a href="/auth">Iniciar sessão com utilizador existente</a>
       </div>
     </form>
   );
