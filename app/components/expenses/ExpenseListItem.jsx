@@ -10,8 +10,10 @@ function ExpenseListItem({ title, amount }) {
         <p className="expense-amount">${amount.toFixed(2)}</p>
       </div>
       <menu className="expense-actions">
-        <button onClick={deleteExpenseItemHandler}>Delete</button>
-        <a href="tbd">Edit</a>
+        {/* Delete */}
+        <button onClick={deleteExpenseItemHandler}>Apagar</button>
+        {/* Edit */}
+        <a href="tbd">Editar</a>
       </menu>
     </article>
   );

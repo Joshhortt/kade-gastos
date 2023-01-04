@@ -15,8 +15,9 @@ function PricingPlan({ title, price, perks, icon }) {
             <li key={perk}>{perk}</li>
           ))}
         </ol>
-        <div className='actions'>
-          <a href="/not-implemented">Learn More</a>
+        <div className="actions">
+          {/* Learn More */}
+          <a href="/not-implemented">Ler mais</a>
         </div>
       </div>
     </article>

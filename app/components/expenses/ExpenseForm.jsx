@@ -4,13 +4,15 @@ function ExpenseForm() {
   return (
     <form method="post" className="form" id="expense-form">
       <p>
-        <label htmlFor="title">Expense Title</label>
+        {/* Expense Title */}
+        <label htmlFor="title">Titulo da Despesa</label>
         <input type="text" id="title" name="title" required maxLength={30} />
       </p>
 
       <div className="form-row">
         <p>
-          <label htmlFor="amount">Amount</label>
+          {/* Amount */}
+          <label htmlFor="amount">Quantia</label>
           <input
             type="number"
             id="amount"
@@ -21,13 +23,16 @@ function ExpenseForm() {
           />
         </p>
         <p>
-          <label htmlFor="date">Date</label>
+          {/* Date */}
+          <label htmlFor="date">Data</label>
           <input type="date" id="date" name="date" max={today} required />
         </p>
       </div>
       <div className="form-actions">
-        <button>Save Expense</button>
-        <a href="tbd">Cancel</a>
+        {/* Save Expense */}
+        <button>Guardar Despesa</button>
+        {/* Cancel */}
+        <a href="tbd">Cancelar</a>
       </div>
     </form>
   );

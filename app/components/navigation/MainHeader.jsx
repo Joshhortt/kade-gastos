@@ -1,4 +1,4 @@
-import Logo from '../util/Logo';
+import Logo from "../util/Logo";
 
 function MainHeader() {
   return (
@@ -10,10 +10,12 @@ function MainHeader() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/pricing">Pricing</a>
+            {/* Pricing */}
+            <a href="/pricing">Preçário</a>
           </li>
           <li>
-            <a href="/expenses">Expenses</a>
+            {/* Expenses */}
+            <a href="/expenses">Despesas</a>
           </li>
         </ul>
       </nav>
