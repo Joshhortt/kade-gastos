@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 function ExpenseForm() {
   const today = new Date().toISOString().slice(0, 10); // yields something like 2023-09-10
 
@@ -30,9 +32,11 @@ function ExpenseForm() {
       </div>
       <div className="form-actions">
         {/* Save Expense */}
-        <button>Guardar Despesa</button>
+        <button>Guardar</button>
         {/* Cancel */}
-        <a href="tbd">Cancelar</a>
+        <Link to="..">Cancelar</Link>
+        {/* This line of code below also cancels - goes to the parent route */}
+        {/* <Link to="/expenses">Cancelar</Link> */}
       </div>
     </form>
   );
