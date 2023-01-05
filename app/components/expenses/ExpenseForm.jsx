@@ -5,7 +5,7 @@ function ExpenseForm() {
     <form method="post" className="form" id="expense-form">
       <p>
         {/* Expense Title */}
-        <label htmlFor="title">Titulo da Despesa</label>
+        <label htmlFor="title">Nome da Despesa</label>
         <input type="text" id="title" name="title" required maxLength={30} />
       </p>
 

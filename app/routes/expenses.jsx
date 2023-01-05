@@ -7,14 +7,14 @@ import expensesStyles from "~/styles/expenses.css";
 const TESTING_EXPENSES = [
   {
     id: "e1",
-    title: "First Expense",
+    title: "Primeira Despesa",
     amount: 101.99,
     date: new Date().toISOString(),
   },
 
   {
     id: "e2",
-    title: "Second Expense",
+    title: "Segunda Despesa",
     amount: 102.99,
     date: new Date().toISOString(),
   },
