@@ -56,4 +56,4 @@ export default function Index() {
 export function links() {
   return [{ rel: "stylesheet", href: marketingStyles }];
 }
-export function meta() {}
+// export function meta() {}

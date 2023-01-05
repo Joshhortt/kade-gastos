@@ -12,12 +12,7 @@ function MainHeader() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            {/* Pricing */}
             <NavLink to="/pricing">Preço</NavLink>
-          </li>
-          <li>
-            {/* Expenses */}
-            <NavLink to="/expenses">Despesas</NavLink>
           </li>
         </ul>
       </nav>
