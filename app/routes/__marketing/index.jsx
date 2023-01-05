@@ -1,6 +1,7 @@
 // your-domain.com/
 
 import { Link } from "@remix-run/react";
+import marketingStyles from "~/styles/marketing.css";
 import { FaArrowRight, FaDollarSign, FaChartBar } from "react-icons/fa";
 
 export default function Index() {
@@ -52,4 +53,7 @@ export default function Index() {
   );
 }
 
+export function links() {
+  return [{ rel: "stylesheet", href: marketingStyles }];
+}
 export function meta() {}

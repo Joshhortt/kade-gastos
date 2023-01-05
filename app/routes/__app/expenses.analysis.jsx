@@ -1,6 +1,7 @@
 // /expenses/analysis
 import ExpenseStatistics from "~/components/expenses/ExpenseStatistics";
 import Chart from "~/components/expenses/Chart";
+import expensesStyles from "~/styles/expenses.css";
 
 const TESTING_EXPENSES = [
   {
@@ -25,4 +26,8 @@ export default function ExpensesAnalysisPage() {
       <ExpenseStatistics expenses={TESTING_EXPENSES} />
     </main>
   );
+}
+
+export function links() {
+  return [{ rel: "stylesheet", href: expensesStyles }];
 }
