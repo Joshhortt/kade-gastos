@@ -9,17 +9,20 @@ function ExpensesHeader() {
       <nav id="main-nav">
         <ul>
           <li>
+            {/* Manage Expenses */}
             <NavLink to="/expenses" end>
-              Manage Expenses
+              Gerir despesas
             </NavLink>
           </li>
           <li>
-            <NavLink to="/expenses/analysis">Analyze Expenses</NavLink>
+            {/* Analyze Expenses */}
+            <NavLink to="/expenses/analysis">Análise despesas</NavLink>
           </li>
         </ul>
       </nav>
       <nav id="cta-nav">
-        <button className="cta">Logout</button>
+        {/* Logout */}
+        <button className="cta">Saír</button>
       </nav>
     </header>
   );
