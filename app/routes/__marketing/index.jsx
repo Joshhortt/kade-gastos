@@ -10,7 +10,7 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaDollarSign />
-          <h2>A sua App para processar mais rápidamente as despesas.</h2>
+          <h2>A Central de controle das suas despesas</h2>
         </header>
         <div className="marketing-content">
           <div className="marketing-image">
