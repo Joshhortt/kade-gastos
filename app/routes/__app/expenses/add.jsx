@@ -20,11 +20,9 @@ export default function AddExpensesPage() {
     </Modal>
   );
 }
-
 export async function action({ request }) {
   const formData = await request.formData();
   const expenseData = Object.fromEntries(formData);
-  console.log(expenseData, formData);
 
   await addExpense(expenseData);
   return redirect("/expenses");
