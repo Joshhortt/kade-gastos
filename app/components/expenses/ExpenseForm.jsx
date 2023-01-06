@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 
 function ExpenseForm() {
-  const today = new Date().toISOString().slice(0, 10); // yields something like 2023-09-10
+  const today = new Date().toISOString().slice(0, 10); // yields something like 2023-01-10
 
   return (
     <form method="post" className="form" id="expense-form">
