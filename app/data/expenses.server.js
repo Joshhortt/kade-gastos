@@ -7,10 +7,10 @@ export async function addExpense(expenseData) {
         title: expenseData.title,
         amount: +expenseData.amount,
         date: new Date(expenseData.date),
+        // User: { connect: { id: userId } },
       },
     });
   } catch (error) {
-    console.log(error);
-    throw error;
+    throw new Error("Failed to add expense.");
   }
 }

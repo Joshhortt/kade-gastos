@@ -17,5 +17,4 @@ model Expense {
   amount Float
   date DateTime
   dateAdded DateTime @default(now())
-
 }
