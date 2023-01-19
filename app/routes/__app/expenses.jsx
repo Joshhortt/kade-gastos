@@ -23,6 +23,7 @@ import { getExpenses } from "~/data/expenses.server";
 
 export default function ExpensesLayout() {
   const expenses = useLoaderData();
+  // console.log(expenses);
 
   return (
     <>
