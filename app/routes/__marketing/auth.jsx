@@ -14,7 +14,9 @@ export async function action(request) {
   const formData = await request.formData();
   const credentials = Object.fromEntries(formData);
 
-  if (authMode === "lofin") {
+  // validate user input
+
+  if (authMode === "login") {
     // login logic
   } else {
     // signup logic (create user)
