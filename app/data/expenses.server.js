@@ -22,8 +22,8 @@ export async function getExpenses() {
     });
     return expenses;
   } catch (error) {
-    console.log(error);
-    throw error;
+    // console.log(error);
+    throw new Error("Não foi possível obter todas as despesas.");
   }
 }
 
@@ -32,8 +32,8 @@ export async function getExpense(id) {
     const expense = await prisma.expense.findFirst({ where: { id } });
     return expense;
   } catch (error) {
-    console.log(error);
-    throw error;
+    // console.log(error);
+    throw new Error("Não foi possível obter a despesa.");
   }
 }
 
@@ -48,8 +48,8 @@ export async function updateExpense(id, expenseData) {
       },
     });
   } catch (error) {
-    console.log(error);
-    throw error;
+    // console.log(error);
+    throw new Error("Não foi possível atualizar a despesa.");
   }
 }
 
@@ -59,7 +59,7 @@ export async function deleteExpense(id) {
       where: { id },
     });
   } catch (error) {
-    console.log(error);
-    throw error;
+    // console.log(error);
+    throw new Error("Não foi possível apagar a despesa.");
   }
 }
