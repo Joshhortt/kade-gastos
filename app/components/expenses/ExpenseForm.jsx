@@ -2,14 +2,14 @@ import {
   Form,
   Link,
   useActionData,
-  // useLoaderData,
+  //useLoaderData,
   useMatches,
   useParams,
   useTransition as useNavigation,
 } from "@remix-run/react";
 
 function ExpenseForm() {
-  const today = new Date().toISOString().slice(0, 10); // yields something like 2023-01-10
+  const today = new Date().toISOString().slice(0, 10); // yields something like 2023-09-10
   const validationErrors = useActionData();
   // const expenseData = useLoaderData();
   const params = useParams();
@@ -18,6 +18,11 @@ function ExpenseForm() {
     (match) => match.id === "routes/__app/expenses"
   ).data;
   const expenseData = expenses.find((expense) => expense.id === params.id);
+
+  if (params.id && !expenseData) {
+    return <p>Endereço de despesa inválida!</p>;
+  }
+
   const navigation = useNavigation();
 
   const defaultValues = expenseData
@@ -42,7 +47,7 @@ function ExpenseForm() {
   //   // ...
   //   submit(event.target, {
   //     // action: '/expenses/add',
-  //     method: "post",
+  //     method: 'post',
   //   });
   // }
 
@@ -54,7 +59,6 @@ function ExpenseForm() {
       // onSubmit={submitHandler}
     >
       <p>
-        {/* Expense Title */}
         <label htmlFor="title">Nome da Despesa</label>
         <input
           type="text"
@@ -65,9 +69,9 @@ function ExpenseForm() {
           defaultValue={defaultValues.title}
         />
       </p>
+
       <div className="form-row">
         <p>
-          {/* Amount */}
           <label htmlFor="amount">Quantia</label>
           <input
             type="number"
@@ -80,7 +84,6 @@ function ExpenseForm() {
           />
         </p>
         <p>
-          {/* Date */}
           <label htmlFor="date">Data</label>
           <input
             type="date"
@@ -96,20 +99,16 @@ function ExpenseForm() {
       </div>
       {validationErrors && (
         <ul>
-          {Object.values(validationErrors).map((error, i) => (
-            <li key={i}>{error}</li>
+          {Object.values(validationErrors).map((error) => (
+            <li key={error}>{error}</li>
           ))}
         </ul>
       )}
       <div className="form-actions">
-        {/* Save Expense */}
         <button disabled={isSubmitting}>
-          {isSubmitting ? "a guardar..." : "Guardar"}
+          {isSubmitting ? "Guardando..." : "Guardar"}
         </button>
-        {/* Cancel */}
         <Link to="..">Cancelar</Link>
-        {/* This line of code below also cancels - goes to the parent route */}
-        {/* <Link to="/expenses">Cancelar</Link> */}
       </div>
     </Form>
   );

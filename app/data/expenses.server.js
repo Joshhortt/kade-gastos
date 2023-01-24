@@ -11,7 +11,7 @@ export async function addExpense(expenseData) {
       },
     });
   } catch (error) {
-    throw new Error("Failed to add expense.");
+    throw new Error("Falha em adicionar despesa.");
   }
 }
 

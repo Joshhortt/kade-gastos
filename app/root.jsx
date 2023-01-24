@@ -11,7 +11,6 @@ import {
 
 import sharedStyles from "~/styles/shared.css";
 import Error from "./components/util/Error";
-// import MainHeader from "./components/navigation/MainHeader";
 
 export const meta = () => ({
   charset: "utf-8",
@@ -21,27 +20,27 @@ export const meta = () => ({
 
 function Document({ title, children }) {
   return (
-    <Document>
-      <Outlet />
-    </Document>
-  );
-}
-
-export default function App() {
-  return (
     <html lang="en">
       <head>
+        <title>{title}</title>
         <Meta />
         <Links />
       </head>
       <body>
-        {/* <MainHeader /> */}
-        <Outlet />
+        {children}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+export default function App() {
+  return (
+    <Document>
+      <Outlet />
+    </Document>
   );
 }
 
@@ -54,7 +53,7 @@ export function CatchBoundary() {
         <Error title={caughtResponse.statusText}>
           <p>
             {caughtResponse.data?.message ||
-              "Algo correu mal. Por favor, tente novamente mais tarde."}
+              "Algo correu mal. Por favor, tente novamente."}
           </p>
           <p>
             Voltar à <Link to="/">segurança</Link>
@@ -65,14 +64,13 @@ export function CatchBoundary() {
   );
 }
 
-export function ErrorBoundary(error) {
+export function ErrorBoundary({ error }) {
   return (
     <Document title="Ocorreu um erro">
       <main>
         <Error title="Ocorreu um erro">
           <p>
-            {error.message ||
-              "Algo correu mal. Por favor, tente novamente mais tarde."}
+            {error.message || "Algo correu mal. Por favor, tente novamente."}
           </p>
           <p>
             Voltar à <Link to="/">segurança</Link>
