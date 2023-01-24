@@ -29,7 +29,7 @@ export default function ExpensesLayout() {
           <section id="no-expenses">
             <h1>Não foram encontradas despesas</h1>
             <p>
-              Iniciar <Link to="add">adicionar despesas</Link> agora!
+              Tente <Link to="add">adicionar despesas</Link> agora!
             </p>
           </section>
         )}
