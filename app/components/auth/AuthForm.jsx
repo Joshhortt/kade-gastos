@@ -13,10 +13,9 @@ function AuthForm() {
   const validationErrors = useActionData();
 
   const authMode = searchParams.get("mode") || "login";
-  // Login
+
   const submitBtnCaption =
     authMode === "login" ? "Login" : "Criar novo utilizador";
-  // Iniciar sessão com utilizador existente
   const toggleBtnCaption =
     authMode === "login"
       ? "Criar novo utilizador"
@@ -37,7 +36,6 @@ function AuthForm() {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" minLength={7} />
       </p>
-
       {validationErrors && (
         <ul>
           {Object.values(validationErrors).map((error) => (
@@ -45,10 +43,9 @@ function AuthForm() {
           ))}
         </ul>
       )}
-
       <div className="form-actions">
         <button disabled={isSubmitting}>
-          {isSubmitting ? "autenticando..." : submitBtnCaption}
+          {isSubmitting ? "Autenticando..." : submitBtnCaption}
         </button>
         <Link to={authMode === "login" ? "?mode=signup" : "?mode=login"}>
           {toggleBtnCaption}
