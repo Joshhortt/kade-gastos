@@ -15,12 +15,12 @@ const PRICING_PLANS = [
   {
     id: "p2",
     title: "Pro",
-    price: "$9.99/mês", //$9.99/month
+    price: "\u20AC9.99/mês", //$9.99/month
     perks: [
       "Utilizadores ilimitados",
       "Despesas/ano ilimitadas",
       "Análise detalhada",
-    ], // "Unlimited Users", "Unlimited expenses/year", "Detailed analytics"
+    ],
     icon: FaTrophy,
   },
 ];
