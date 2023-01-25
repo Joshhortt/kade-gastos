@@ -49,4 +49,9 @@ export function links() {
   return [{ rel: "stylesheet", href: marketingStyles }];
 }
 
-// export function meta() {}
+export function meta() {
+  return {
+    title: "Preçário - Grande Produto, Preços Acessíveis",
+    description: "Veja os nossos planos de preços.",
+  };
+}

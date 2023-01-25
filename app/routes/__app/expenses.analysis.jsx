@@ -58,3 +58,10 @@ export function CatchBoundary() {
 export function links() {
   return [{ rel: "stylesheet", href: expensesStyles }];
 }
+
+export function meta() {
+  return {
+    title: "Análise de Despesas..",
+    description: "Resumo Estatístico das suas Despesas.",
+  };
+}

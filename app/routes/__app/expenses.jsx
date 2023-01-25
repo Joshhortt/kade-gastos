@@ -56,3 +56,10 @@ export async function loader({ request }) {
 // export function CatchBoundary() {
 //   return <p>Erro</p>
 // }
+
+export function meta() {
+  return {
+    title: "Despesas.",
+    description: "Adicionar e Carregar Despesas.",
+  };
+}

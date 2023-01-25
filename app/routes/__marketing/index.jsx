@@ -10,7 +10,7 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaDollarSign />
-          <h2>A Central de controle das suas despesas</h2>
+          <h2>A Central de Controle das suas Despesas</h2>
         </header>
         <div className="marketing-content">
           <div className="marketing-image">
@@ -21,7 +21,7 @@ export default function Index() {
           </div>
           <div className="marketing-explanation">
             {/* Manage your expenses in one central place. */}
-            <p>Gerir as suas despesas num só local.</p>
+            <p>Faça a Gestão das suas Despesas aqui</p>
             <p>
               <Link className="cta" to="/expenses">
                 {/* Get Started */}
@@ -41,8 +41,8 @@ export default function Index() {
         <div className="marketing-content">
           {/* Benefit from best-in-class analytics to understand your spending patterns. */}
           <p className="marketing-explanation">
-            Beneficie da melhor Análise e Controlo Orçamental dos seus gastos
-            Padrão.
+            Beneficie de uma melhor Análise &<br />
+            Controlo Orçamental dos seus Gastos
           </p>
           <div className="marketing-image">
             <img src="images/expenses-chart.jpg" alt="A demo bar chart." />
@@ -56,4 +56,10 @@ export default function Index() {
 export function links() {
   return [{ rel: "stylesheet", href: marketingStyles }];
 }
-// export function meta() {}
+
+export function meta() {
+  return {
+    title: "Kadê Gastos - A Central de Controle das suas Despesas.",
+    description: "Faça a Gestão das suas Despesas num só Local.",
+  };
+}

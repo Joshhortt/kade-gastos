@@ -40,3 +40,13 @@ export async function action({ request }) {
   await addExpense(expenseData, userId);
   return redirect("/expenses");
 }
+
+export function meta({ params, location, data, parentsData }) {
+  const expense = parentsData["routes/__app/expenses"].find(
+    (expense) => expense.id === params.id
+  );
+  return {
+    title: expense.title,
+    description: "Adicionar Despesa.",
+  };
+}
