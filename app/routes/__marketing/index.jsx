@@ -69,3 +69,6 @@ export function headers({ actionHeaders, loaderHeaders, parentHeaders }) {
     "Cache-Control": parentHeaders.get("Cache-Control"), // 60 minutes
   };
 }
+
+// This disables Javascript files.(only index.jsx & pricing.jsx | The other routes do not)
+export const handle = { disableJS: true };
