@@ -55,3 +55,9 @@ export function meta() {
     description: "Veja os nossos planos de preços.",
   };
 }
+
+export function headers({ actionHeaders, loaderHeaders, parentHeaders }) {
+  return {
+    "Cache-Control": parentHeaders.get("Cache-Control"), // 60 minutes
+  };
+}
