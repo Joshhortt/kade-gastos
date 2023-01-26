@@ -1,15 +1,11 @@
 import { Link, useFetcher } from "@remix-run/react";
 
 function ExpenseListItem({ id, title, amount }) {
-  // const submit = useSubmit();
   const fetcher = useFetcher();
 
   function deleteExpenseItemHandler() {
-    const proceed = confirm("Tem a certeza! Que quer apagar esta despesa?");
-    // submit(null, {
-    //   method: "delete",
-    //   action: `/expenses/${id}`,
-    // });
+    const proceed = confirm("Tem a certezaa que quer apagar esta despesa?");
+
     if (!proceed) {
       return;
     }
@@ -35,12 +31,7 @@ function ExpenseListItem({ id, title, amount }) {
         <p className="expense-amount">${amount.toFixed(2)}</p>
       </div>
       <menu className="expense-actions">
-        {/* Delete */}
         <button onClick={deleteExpenseItemHandler}>Apagar</button>
-        {/* Edit */}
-        {/* <Form method="delete" action={`/expenses/${id}`}>
-          <button>Apagar</button>
-        </Form> */}
         <Link to={id}>Editar</Link>
       </menu>
     </article>

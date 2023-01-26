@@ -11,9 +11,7 @@ import { requireUserSession } from "~/data/auth.server";
 export default function AddExpensesPage() {
   const navigate = useNavigate();
   function closeHandler() {
-    //navigate programmatically
     navigate("..");
-    // navigate("/expenses");
   }
 
   return (
@@ -31,22 +29,9 @@ export async function action({ request }) {
   try {
     validateExpenseInput(expenseData);
   } catch (err) {
-    // technically this err obj
-    // (validationErrorsObject) is obtained from
-    // validation.server.js
     return err;
   }
 
   await addExpense(expenseData, userId);
   return redirect("/expenses");
 }
-
-// export function meta({ params, location, data, parentsData }) {
-//   const expense = parentsData["routes/__app/expenses"].find(
-//     (expense) => expense.id === params.id
-//   );
-//   return {
-//     title: expense.title,
-//     description: "Adicionar Despesa.",
-//   };
-// }

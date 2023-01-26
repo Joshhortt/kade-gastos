@@ -2,15 +2,15 @@
 
 import { Link } from "@remix-run/react";
 import marketingStyles from "~/styles/marketing.css";
-import { FaArrowRight, FaDollarSign, FaChartBar } from "react-icons/fa";
+import { FaArrowRight, FaMoneyCheck, FaChartBar } from "react-icons/fa";
 
 export default function Index() {
   return (
     <main>
       <section className="marketing-section">
         <header>
-          <FaDollarSign />
-          <h2>A Central de Controle das suas Despesas</h2>
+          <FaMoneyCheck />
+          <h2>Gestão de despesas em tempo real</h2>
         </header>
         <div className="marketing-content">
           <div className="marketing-image">
@@ -20,11 +20,9 @@ export default function Index() {
             />
           </div>
           <div className="marketing-explanation">
-            {/* Manage your expenses in one central place. */}
-            <p>Faça a Gestão das suas Despesas aqui</p>
+            <p>Faça a gestão das suas despesas aqui!</p>
             <p>
               <Link className="cta" to="/expenses">
-                {/* Get Started */}
                 <span>Iniciar</span>
                 <FaArrowRight />
               </Link>
@@ -35,13 +33,12 @@ export default function Index() {
       <section className="marketing-section">
         <header>
           <FaChartBar />
-          {/* Detailed Analytics */}
           <h2>Análise detalhada</h2>
         </header>
         <div className="marketing-content">
-          {/* Benefit from best-in-class analytics to understand your spending patterns. */}
           <p className="marketing-explanation">
-            Beneficie de uma melhor Análise &<br />
+            Beneficie de uma Análise estatística &
+            <br />
             Controlo Orçamental dos seus Gastos
           </p>
           <div className="marketing-image">
@@ -66,9 +63,8 @@ export function meta() {
 
 export function headers({ actionHeaders, loaderHeaders, parentHeaders }) {
   return {
-    "Cache-Control": parentHeaders.get("Cache-Control"), // 60 minutes
+    "Cache-Control": parentHeaders.get("Cache-Control"),
   };
 }
 
-// This disables Javascript files.(only index.jsx & pricing.jsx | The other routes do not)
 export const handle = { disableJS: true };

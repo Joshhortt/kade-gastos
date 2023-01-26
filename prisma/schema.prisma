@@ -1,5 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// schema
 
 generator client {
   provider = "prisma-client-js"
@@ -16,8 +15,6 @@ model User {
   password String
   expenses Expense[]
 }
-
-//  Expense model definition
 model Expense {
   id        String    @id @default(auto()) @map("_id") @db.ObjectId
   title     String

@@ -7,15 +7,15 @@ import PricingPlan from "~/components/marketing/PricingPlan";
 const PRICING_PLANS = [
   {
     id: "p1",
-    title: "Basico", // Basic
-    price: "Grátis", // Free forever
+    title: "Basico",
+    price: "Grátis",
     perks: ["1 Utilizador", "Até 1000 despesas/ano", "Análise básica"],
     icon: FaHandshake,
   },
   {
     id: "p2",
     title: "Pro",
-    price: "\u20AC9.99/mês", //$9.99/month
+    price: "\u20AC3.99/mês",
     perks: [
       "Utilizadores ilimitados",
       "Despesas/ano ilimitadas",
@@ -28,8 +28,7 @@ const PRICING_PLANS = [
 export default function PricingPage() {
   return (
     <main id="pricing">
-      {/* Great Product, Simple Pricing */}
-      <h2>Grande Produto, Preços Acessíveis</h2>
+      <h2>A Calculadora de Gastos para Orçamentos Pessoais</h2>
       <ol id="pricing-plans">
         {PRICING_PLANS.map((plan) => (
           <li key={plan.id} className="plan">
@@ -51,8 +50,8 @@ export function links() {
 
 export function meta() {
   return {
-    title: "Preçário - Grande Produto, Preços Acessíveis",
-    description: "Veja os nossos planos de preços.",
+    title: "Pacotes - A Calculadora de Gastos para Orçamentos Pessoais",
+    description: "Veja os nossos pacotes de preços.",
   };
 }
 
@@ -62,5 +61,4 @@ export function headers({ actionHeaders, loaderHeaders, parentHeaders }) {
   };
 }
 
-// This disables Javascript files.(only pricing.jsx & index.jsx | The other routes do not)
 export const handle = { disableJS: true };

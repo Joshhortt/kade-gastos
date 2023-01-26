@@ -22,6 +22,6 @@ export function links() {
 
 export function headers() {
   return {
-    "Cache-Control": "max-age=3600", // 60 minutes
+    "Cache-Control": "max-age=3600",
   };
 }

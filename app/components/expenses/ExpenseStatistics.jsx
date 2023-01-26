@@ -19,7 +19,7 @@ function ExpenseStatistics({ expenses }) {
   return (
     <section>
       {/* Summary Statistics */}
-      <h2>Resumo estatístico</h2>
+      <h2>Resumo Estatístico</h2>
       <dl id="expense-statistics">
         <div>
           <dt>Total</dt>

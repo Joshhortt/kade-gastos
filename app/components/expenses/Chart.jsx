@@ -10,14 +10,14 @@ function Chart({ expenses }) {
     { label: "Jun", value: 0 },
     { label: "Jul", value: 0 },
     { label: "Ago", value: 0 },
-    { label: "Sep", value: 0 },
-    { label: "Oct", value: 0 },
+    { label: "Set", value: 0 },
+    { label: "Out", value: 0 },
     { label: "Nov", value: 0 },
     { label: "Dez", value: 0 },
   ];
 
   for (const expense of expenses) {
-    const expenseMonth = new Date(expense.date).getMonth(); // starting at 0 => January => 0
+    const expenseMonth = new Date(expense.date).getMonth();
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 
@@ -26,8 +26,7 @@ function Chart({ expenses }) {
 
   return (
     <section>
-      {/* Monthly Expenses */}
-      <h2>Despesas mensais</h2>
+      <h2>Despesas Mensais</h2>
       <ol className="chart">
         {chartDataPoints.map((dataPoint) => (
           <ChartBar

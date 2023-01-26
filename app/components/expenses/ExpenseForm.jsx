@@ -2,16 +2,14 @@ import {
   Form,
   Link,
   useActionData,
-  //useLoaderData,
   useMatches,
   useParams,
   useTransition as useNavigation,
 } from "@remix-run/react";
 
 function ExpenseForm() {
-  const today = new Date().toISOString().slice(0, 10); // yields something like 2023-09-10
+  const today = new Date().toISOString().slice(0, 10);
   const validationErrors = useActionData();
-  // const expenseData = useLoaderData();
   const params = useParams();
   const matches = useMatches();
   const expenses = matches.find(
@@ -39,24 +37,11 @@ function ExpenseForm() {
 
   const isSubmitting = navigation.state !== "idle";
 
-  // const submit = useSubmit();
-
-  // function submitHandler(event) {
-  //   event.preventDefault();
-  //   // perform your own validation
-  //   // ...
-  //   submit(event.target, {
-  //     // action: '/expenses/add',
-  //     method: 'post',
-  //   });
-  // }
-
   return (
     <Form
       method={expenseData ? "patch" : "post"}
       className="form"
       id="expense-form"
-      // onSubmit={submitHandler}
     >
       <p>
         <label htmlFor="title">Nome da Despesa</label>

@@ -1,4 +1,5 @@
 // /expenses/analysis
+
 import ExpenseStatistics from "~/components/expenses/ExpenseStatistics";
 import Chart from "~/components/expenses/Chart";
 import expensesStyles from "~/styles/expenses.css";
@@ -37,7 +38,7 @@ export async function loader({ request }) {
     );
   }
 
-  return expenses; // return json(expenses);
+  return expenses;
 }
 
 export function CatchBoundary() {

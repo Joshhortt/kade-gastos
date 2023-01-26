@@ -9,19 +9,16 @@ function ExpensesHeader() {
       <nav id="main-nav">
         <ul>
           <li>
-            {/* Manage Expenses */}
             <NavLink to="/expenses" end>
-              Gerir despesas
+              Gerir Despesas
             </NavLink>
           </li>
           <li>
-            {/* Analyze Expenses */}
-            <NavLink to="/expenses/analysis">Análise despesas</NavLink>
+            <NavLink to="/expenses/analysis">Análise Despesas</NavLink>
           </li>
         </ul>
       </nav>
       <nav id="cta-nav">
-        {/* Logout */}
         <Form method="post" action="logout">
           <button className="cta">Saír</button>
         </Form>

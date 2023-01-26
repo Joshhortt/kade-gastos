@@ -14,7 +14,7 @@ function MainHeader() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/pricing">Preço</NavLink>
+            <NavLink to="/pricing">Pacotes</NavLink>
           </li>
         </ul>
       </nav>

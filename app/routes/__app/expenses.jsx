@@ -1,4 +1,5 @@
 // /expenses => shared layout
+
 import { json } from "@remix-run/node";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 import { FaPlus, FaDownload } from "react-icons/fa";
@@ -41,26 +42,13 @@ export default function ExpensesLayout() {
 
 export async function loader({ request }) {
   const userId = await requireUserSession(request);
-
   const expenses = await getExpenses(userId);
-  // return expenses; // return json(expenses);
   return json(expenses, {
     headers: {
       "Cache-Control": "max-age=3",
     },
   });
-
-  // if (!expenses || expenses.length === 0) {
-  //   throw json(
-  //     { message: "Não foi possível encontrar despesas." },
-  //     { status: 404, statusText: "Nenhuma despesa encontrada." }
-  //   );
-  // }
 }
-
-// export function CatchBoundary() {
-//   return <p>Erro</p>
-// }
 
 export function meta() {
   return {
@@ -71,6 +59,6 @@ export function meta() {
 
 export function headers({ actionHeaders, loaderHeaders, parentHeaders }) {
   return {
-    "Cache-Control": loaderHeaders.get("Cache-Control"), // 60 minutes
+    "Cache-Control": loaderHeaders.get("Cache-Control"),
   };
 }
